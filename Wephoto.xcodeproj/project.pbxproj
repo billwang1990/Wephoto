@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23962F6116FBBAEE00F29170 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23962F6016FBBAEE00F29170 /* UIKit.framework */; };
+		23962F6316FBBAEE00F29170 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23962F6216FBBAEE00F29170 /* Foundation.framework */; };
+		23962F6516FBBAEE00F29170 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23962F6416FBBAEE00F29170 /* CoreGraphics.framework */; };
+		23962F6B16FBBAEE00F29170 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23962F6916FBBAEE00F29170 /* InfoPlist.strings */; };
+		23962F6D16FBBAEE00F29170 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23962F6C16FBBAEE00F29170 /* main.m */; };
+		23962F7116FBBAEE00F29170 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23962F7016FBBAEE00F29170 /* AppDelegate.m */; };
+		23962F7316FBBAEE00F29170 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 23962F7216FBBAEE00F29170 /* Default.png */; };
+		23962F7516FBBAEE00F29170 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23962F7416FBBAEE00F29170 /* Default@2x.png */; };
+		23962F7716FBBAEE00F29170 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23962F7616FBBAEE00F29170 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23962F5C16FBBAEE00F29170 /* Wephoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wephoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23962F6016FBBAEE00F29170 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		23962F6216FBBAEE00F29170 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		23962F6416FBBAEE00F29170 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		23962F6816FBBAEE00F29170 /* Wephoto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wephoto-Info.plist"; sourceTree = "<group>"; };
+		23962F6A16FBBAEE00F29170 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		23962F6C16FBBAEE00F29170 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23962F6E16FBBAEE00F29170 /* Wephoto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wephoto-Prefix.pch"; sourceTree = "<group>"; };
+		23962F6F16FBBAEE00F29170 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23962F7016FBBAEE00F29170 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23962F7216FBBAEE00F29170 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		23962F7416FBBAEE00F29170 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		23962F7616FBBAEE00F29170 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23962F5916FBBAEE00F29170 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23962F6116FBBAEE00F29170 /* UIKit.framework in Frameworks */,
+				23962F6316FBBAEE00F29170 /* Foundation.framework in Frameworks */,
+				23962F6516FBBAEE00F29170 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23962F5116FBBAEE00F29170 = {
+			isa = PBXGroup;
+			children = (
+				23962F6616FBBAEE00F29170 /* Wephoto */,
+				23962F5F16FBBAEE00F29170 /* Frameworks */,
+				23962F5D16FBBAEE00F29170 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23962F5D16FBBAEE00F29170 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23962F5C16FBBAEE00F29170 /* Wephoto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23962F5F16FBBAEE00F29170 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23962F6016FBBAEE00F29170 /* UIKit.framework */,
+				23962F6216FBBAEE00F29170 /* Foundation.framework */,
+				23962F6416FBBAEE00F29170 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23962F6616FBBAEE00F29170 /* Wephoto */ = {
+			isa = PBXGroup;
+			children = (
+				23962F6F16FBBAEE00F29170 /* AppDelegate.h */,
+				23962F7016FBBAEE00F29170 /* AppDelegate.m */,
+				23962F6716FBBAEE00F29170 /* Supporting Files */,
+			);
+			path = Wephoto;
+			sourceTree = "<group>";
+		};
+		23962F6716FBBAEE00F29170 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23962F6816FBBAEE00F29170 /* Wephoto-Info.plist */,
+				23962F6916FBBAEE00F29170 /* InfoPlist.strings */,
+				23962F6C16FBBAEE00F29170 /* main.m */,
+				23962F6E16FBBAEE00F29170 /* Wephoto-Prefix.pch */,
+				23962F7216FBBAEE00F29170 /* Default.png */,
+				23962F7416FBBAEE00F29170 /* Default@2x.png */,
+				23962F7616FBBAEE00F29170 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23962F5B16FBBAEE00F29170 /* Wephoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23962F7A16FBBAEE00F29170 /* Build configuration list for PBXNativeTarget "Wephoto" */;
+			buildPhases = (
+				23962F5816FBBAEE00F29170 /* Sources */,
+				23962F5916FBBAEE00F29170 /* Frameworks */,
+				23962F5A16FBBAEE00F29170 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wephoto;
+			productName = Wephoto;
+			productReference = 23962F5C16FBBAEE00F29170 /* Wephoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23962F5316FBBAEE00F29170 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "bill wang";
+			};
+			buildConfigurationList = 23962F5616FBBAEE00F29170 /* Build configuration list for PBXProject "Wephoto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 23962F5116FBBAEE00F29170;
+			productRefGroup = 23962F5D16FBBAEE00F29170 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23962F5B16FBBAEE00F29170 /* Wephoto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23962F5A16FBBAEE00F29170 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23962F6B16FBBAEE00F29170 /* InfoPlist.strings in Resources */,
+				23962F7316FBBAEE00F29170 /* Default.png in Resources */,
+				23962F7516FBBAEE00F29170 /* Default@2x.png in Resources */,
+				23962F7716FBBAEE00F29170 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23962F5816FBBAEE00F29170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23962F6D16FBBAEE00F29170 /* main.m in Sources */,
+				23962F7116FBBAEE00F29170 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23962F6916FBBAEE00F29170 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23962F6A16FBBAEE00F29170 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23962F7816FBBAEE00F29170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23962F7916FBBAEE00F29170 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23962F7B16FBBAEE00F29170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wephoto/Wephoto-Prefix.pch";
+				INFOPLIST_FILE = "Wephoto/Wephoto-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		23962F7C16FBBAEE00F29170 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wephoto/Wephoto-Prefix.pch";
+				INFOPLIST_FILE = "Wephoto/Wephoto-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23962F5616FBBAEE00F29170 /* Build configuration list for PBXProject "Wephoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23962F7816FBBAEE00F29170 /* Debug */,
+				23962F7916FBBAEE00F29170 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23962F7A16FBBAEE00F29170 /* Build configuration list for PBXNativeTarget "Wephoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23962F7B16FBBAEE00F29170 /* Debug */,
+				23962F7C16FBBAEE00F29170 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23962F5316FBBAEE00F29170 /* Project object */;
+}
