@@ -1,0 +1,134 @@
+//
+//  GetList.h
+//  VDisk
+//
+//  Created by 朱冬蕾 on 9/12/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "ListData.h"
+#import "PageInfoData.h"
+#import "HttpEngine.h"
+#import "JSON.h"
+#import "PublecDefine.h"
+#import "AppDelegate.h"
+#import "FileManager.h"
+#import "LoginManager.h"
+#import "PublicMethod.h"
+#import "GetRecycleListManager.h"
+#import "UpLoadManager.h"
+
+@interface GetListManager : NSObject<ASIHTTPRespondDelegate>{
+    NSString *operatingDirID;            //目前操作的目录的id          
+    NSString *operatingDirPid;           //父目录的ID
+    NSString *m_listPid;                 //存储当前页面的pid
+    NSMutableArray *listarr;             //存储当前页面属性
+    NSMutableArray *keepListarr;         //创建字典用于数据缓存
+    NSString *m_dologid;                 //创建字符串，持有dologid
+    int      tmpcount;
+    int count;
+}
+
+@property(retain,nonatomic)NSMutableDictionary *listDict;
+@property(retain,nonatomic)NSMutableArray      *keepListarr;
+@property(retain,nonatomic)NSString            *operatingDirID;
+@property(retain,nonatomic)NSString            *operatingDirPid;
+@property(retain,nonatomic)NSString            *operatingDirToPid;
+@property(retain,nonatomic)NSString            *operatingDirName;
+@property(retain,nonatomic)NSArray             *deleteArray;
+@property(retain,nonatomic)NSString            *m_dologid;
+@property(retain,nonatomic)NSMutableArray      *listarr;
+@property(assign,nonatomic)int                  tmpcount;
+
++ (GetListManager *)shareInstance;
+
+
+/*********************************************************************
+ 函数名称 : getListToken
+ 函数描述 : 列表接口
+ 参数 : token
+ dir_id
+ page
+ pageSize
+ dologid
+ 返回值 : N／A
+ 作者 : 朱冬蕾
+ *********************************************************************/
+-(void)getListToken:(NSString*)token
+          anddir_id:(NSString*)dir_id
+            andpage:(NSString*)Page
+        andpageSize:(NSString*)pageSize
+         anddologid:(NSString*)dologid;
+
+/*********************************************************************
+ 函数名称 : creatDirWithToken:andDirName:andParentID:andDologID:
+ 函数描述 : 新建文件目录
+ 参数 : 
+ token : 动态签名
+ dirName : 新目录名称
+ parentID : 上级目录ID
+ dologID : dologid
+ 返回值 : 无
+ 作者 : 崔俊奇
+ *********************************************************************/
+-(void)creatDirInDir:(NSString *)dirPid
+           WithToken:(NSString *)token 
+          andDirName:(NSString *)dirName 
+         andParentID:(NSString *)parentID 
+          andDologID:(NSString *)dologID;
+
+/*********************************************************************
+ 函数名称 : deleteDirWithToken:andDirID:andDologID:
+ 函数描述 : 删除文件目录
+ 参数 : 
+ token : 动态签名
+ dirID : 目录ID
+ dologID : dologid
+ 返回值 : 无
+ 作者 : 崔俊奇
+ *********************************************************************/
+-(void)deleteDirInDir:(NSString *)dirPid
+            WithToken:(NSString *)token 
+        andDirIDArray:(NSArray *)dirIDArray 
+           andDologID:(NSString *)dologid;
+
+/*********************************************************************
+ 函数名称 : reNameDirWithToken:andDirID:andNewName:andDologID:
+ 函数描述 : 重命名文件目录
+ 参数 : 
+ token : 动态签名
+ dirID : 目录ID
+ newName : 新目录名称
+ dologID : dologid
+ 返回值 : 无
+ 作者 : 崔俊奇
+ *********************************************************************/
+-(void)reNameDirInDir:(NSString *)dirPid
+            WithToken:(NSString *)token 
+             andDirID:(NSString *)dirID 
+           andNewName:(NSString *)newName
+           andDologID:(NSString *)dologid;
+
+/*********************************************************************
+ 函数名称 : moveDirWithToken:andDirID:andNewName:andDologID:
+ 函数描述 : 移动目录
+ 参数 : 
+ token : 动态签名
+ dirID : 目录ID
+ newName : 新目录名称
+ parentID : 移动到的目录名称
+ dologID : dologid
+ 返回值 : 无
+ 作者 : 崔俊奇
+ *********************************************************************/
+-(void)moveDirInDir:(NSString *)dirPid
+          WithToken:(NSString *)token 
+           andDirID:(NSString *)dirID 
+         andNewName:(NSString *)newName 
+         ToParentID:(NSString *)parentID 
+         andDologID:(NSString *)dologid;
+
+-(void)refreshCurrentListDictWithPid:(NSString *)dirPid;
+
+@end

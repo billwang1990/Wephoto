@@ -7,11 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "PhotoVCViewController.h"
+
+@interface AppDelegate()
+-(void)inittabbar;
+@end
 
 @implementation AppDelegate
 
+@synthesize tabbar;
+@synthesize photo;
+@synthesize profile;
+@synthesize dologid = _dologid;
+@synthesize dologdir = _dologdir;
+
 - (void)dealloc
 {
+    [_window release];
+    [_dologid release];
     [_window release];
     [super dealloc];
 }
@@ -20,9 +33,49 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    [self inittabbar];
+    self.window.rootViewController = self.tabbar;
+    [self.window addSubview:self.tabbar.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+    
+}
+
+-(void) inittabbar
+{
+    self.profile = [[[Profile alloc]initWithNibName:@"Profile" bundle:nil]autorelease];
+    
+    UINavigationController *profile_nav = [[UINavigationController alloc] initWithRootViewController:self.profile];
+    profile_nav.delegate = (id)self;
+    profile_nav.tabBarItem.tag = 1;
+    
+    self.photo = [[[PhotoVCViewController alloc]init]autorelease];
+    
+    UINavigationController *photo_nav = [[UINavigationController alloc] initWithRootViewController:self.photo];
+    photo_nav.tabBarItem.tag = 0;
+
+    self.tabbar = [[UITabBarController alloc] init];
+    self.tabbar.delegate = self;
+    
+    NSArray *viewControllerArray = [NSArray arrayWithObjects:photo_nav,profile_nav,nil];
+    
+    self.tabbar.viewControllers = viewControllerArray;
+    
+    [profile_nav release];
+    [photo_nav release];
+    [viewControllerArray release];
+}
+
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+
+    if(viewController.tabBarItem.tag == 0)
+    {
+        //[[NSNotificationCenter defaultCenter]postNotificationName:RELOADPHOTO object:nil userInfo:nil];
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

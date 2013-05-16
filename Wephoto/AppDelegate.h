@@ -7,9 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
+#import "head.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class PhotoVCViewController;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+{
+    NSString *_dologid;
+    NSArray  *_dologdir;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UITabBarController *tabbar;
+@property (strong, nonatomic) PhotoVCViewController *photo;
+@property (strong, nonatomic) Profile   *profile;
+
+@property (retain, nonatomic) NSString *dologid;
+@property (retain, nonatomic) NSArray  *dologdir;
 
 @end
